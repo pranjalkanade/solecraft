@@ -1,0 +1,13 @@
+{
+  "name": "solecraft",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "node -e \"console.log('Static HTML app: no build step required')\"",
+    "start": "node server.js"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
