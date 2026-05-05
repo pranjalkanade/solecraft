@@ -2,6 +2,8 @@
 
 Static HTML SoleCraft website packaged for Boltic deployment.
 
+Deployed via Boltic from this repository.
+
 ## Local Development
 
 ```bash
