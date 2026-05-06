@@ -2189,6 +2189,29 @@
   }
   .product-modal-close:hover { background: #fff; }
   .product-modal-close svg { width: 18px; height: 18px; }
+
+  /* Mobile-friendly Back button: pill-shaped, top-left, large tap target.
+     Hidden on desktop where the centered card uses only the X close button. */
+  .product-modal-back {
+    position: absolute; top: 14px; left: 14px;
+    z-index: 2;
+    background: rgba(245,241,234,0.95); border: none;
+    height: 40px;
+    padding: 0 16px 0 12px;
+    border-radius: 999px;
+    display: inline-flex; align-items: center; gap: 6px;
+    cursor: pointer;
+    color: var(--ink);
+    font: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: background 0.15s, transform 0.1s;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .product-modal-back:hover { background: #fff; }
+  .product-modal-back:active { transform: scale(0.96); }
+  .product-modal-back svg { width: 18px; height: 18px; }
   .product-modal-body {
     flex: 1;
     overflow-y: auto;
@@ -5199,6 +5222,10 @@
 <!-- Product detail modal -->
 <div class="product-modal-overlay" id="productModalOverlay" onclick="closeProductModal()"></div>
 <div class="product-modal" id="productModal" role="dialog" aria-modal="true" aria-labelledby="pmName">
+  <button class="product-modal-back" onclick="closeProductModal()" aria-label="Back">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+    <span>Back</span>
+  </button>
   <button class="product-modal-close" onclick="closeProductModal()" aria-label="Close">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
   </button>
